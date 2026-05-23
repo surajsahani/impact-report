@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         3: `<h4>📍 Slide 3: Educational Content Creation</h4>
             <ul>
                 <li><strong>Anish Jadav Memorial Foundation:</strong> Highlighting our active channel dedicated to democratizing education.</li>
-                <li><strong>Diverse Content Types:</strong> Mention we stream full interactive <strong>DSA coding classes</strong>, post simple <strong>English learning tips</strong> (connected to Ella & Zoe), and upload <strong>campus shorts</strong> covering student programs and student life.</li>
+                <li><strong>Diverse Content Types:</strong> Mention we stream full interactive <strong>DSA coding classes</strong>, upload <strong>AI learning videos</strong>, and post <strong>shorts about all campus programs</strong> (ranging from software engineering to language skills).</li>
                 <li><strong>Key Live Metrics:</strong> Over <strong>11,920+ views</strong>, <strong>88.9 watch hours</strong>, and growing with <strong>142+ subscribers</strong>!</li>
                 <li><strong>Spotlight Feature:</strong> Point out our featured video tutorial: <em>CodeChef 227D - Q2. Bank Glitch</em> by Suraj, showing how we walk students step-by-step through algorithm puzzles.</li>
             </ul>`,
