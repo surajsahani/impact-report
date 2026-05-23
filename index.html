@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavGurukul Impact Report 2024-25 | 1 Year of Building & Student Impact</title>
+    <meta name="description" content="An interactive showcase of 1 Year of Learning, Building & Student Impact at NavGurukul (2024-25). Explore DSA sessions, hackathons, open source initiatives, and campus stories.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-glow bg-glow-1" id="glow-1"></div>
+    <div class="bg-glow bg-glow-2" id="glow-2"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Floating Global Header -->
+    <header class="global-header glass">
+        <div class="logo">
+            <span class="logo-emoji">🎉</span>
+            <div class="logo-text">
+                <span class="logo-title">NavGurukul</span>
+                <span class="logo-subtitle">Impact Report 2024-25</span>
+            </div>
+        </div>
+        
+        <div class="controls-group">
+            <!-- Mode Switcher -->
+            <div class="toggle-container glass-inset">
+                <button class="toggle-btn active" id="btn-slides" title="Switch to Slideshow Mode (Arrow Keys)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                    <span>Slideshow</span>
+                </button>
+                <button class="toggle-btn" id="btn-scroll" title="Switch to Continuous Scroll Report">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                    <span>Scroll Report</span>
+                </button>
+            </div>
+            
+            <!-- Dark/Light Theme Toggle -->
+            <button class="theme-toggle glass" id="theme-toggle" title="Toggle Theme (Dark/Light)">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.22" x2="5.64" y2="17.84"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            
+            <!-- Fullscreen Button -->
+            <button class="icon-btn glass" id="btn-fullscreen" title="Toggle Fullscreen">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Slides Container -->
+    <main class="slides-container" id="slides-container">
+        
+        <!-- Slide 1: Welcome & Landing Page -->
+        <section class="slide active" id="slide-1" data-index="1">
+            <div class="slide-background parallax-bg" style="background-image: linear-gradient(to bottom, rgba(8, 12, 20, 0.85), rgba(8, 12, 20, 0.95)), url('assets/images/campus_photo.jpg');"></div>
+            <div class="slide-content hero-slide">
+                <div class="hero-badge neon-border animate-fade-up">NavGurukul 2024-25</div>
+                <h1 class="hero-title animate-fade-up-delayed">
+                    1 Year of <span class="text-gradient">Learning</span>,<br>
+                    <span class="text-gradient-alt">Building</span> & Student Impact
+                </h1>
+                <p class="hero-subtitle animate-fade-up-delayed-2">
+                    Empowering students from marginalized backgrounds to code, build, and lead.
+                </p>
+                <div class="hero-photos-grid animate-fade-up-delayed-3">
+                    <div class="photo-card glass hover-lift">
+                        <img src="assets/images/campus_photo.jpg" alt="Students coding inside a vibrant NavGurukul campus room">
+                        <div class="photo-card-caption">💻 Students Coding</div>
+                    </div>
+                    <div class="photo-card glass hover-lift">
+                        <div class="photo-placeholder-gradient">🏆</div>
+                        <div class="photo-card-caption">🎉 Hackathon Fun</div>
+                    </div>
+                    <div class="photo-card glass hover-lift">
+                        <div class="photo-placeholder-gradient-alt">🤝</div>
+                        <div class="photo-card-caption">🌟 Mentorship</div>
+                    </div>
+                </div>
+                <div class="hero-footer-status">
+                    <span class="pulse-indicator"></span> Still Building 😊
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: DSA Supporting & Pillars -->
+        <section class="slide" id="slide-2" data-index="2">
+            <div class="slide-content">
+                <header class="slide-header">
+                    <span class="slide-badge">DSA & SUPPORT</span>
+                    <h2 class="slide-title">💻 Supporting Students in DSA</h2>
+                </header>
+                <div class="grid-2-1">
+                    <!-- Column 1: Feature Pillars -->
+                    <div class="pillars-grid">
+                        <div class="pillar-card glass hover-lift">
+                            <div class="pillar-icon-box">
+                                <img src="assets/images/codechef_photo.png" alt="Students cheering at a coding challenge milestone" class="pillar-img-header">
+                            </div>
+                            <div class="pillar-body">
+                                <h3>DSA Sessions</h3>
+                                <p>Learning complex algorithms together through collaborative pair programming.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-card glass hover-lift">
+                            <div class="pillar-icon">🤝</div>
+                            <div class="pillar-body">
+                                <h3>Mentorship</h3>
+                                <p>1-on-1 problem-solving support from guides who simplify concepts.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-card glass hover-lift">
+                            <div class="pillar-icon">🧠</div>
+                            <div class="pillar-body">
+                                <h3>Problem Solving</h3>
+                                <p>Think, try, solve, repeat! Training analytical minds for product companies.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-card glass hover-lift">
+                            <div class="pillar-icon">🌟</div>
+                            <div class="pillar-body">
+                                <h3>Confidence Building</h3>
+                                <p>Breaking the imposter syndrome—proving every student can master DSA!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2: Code Editor Mockup -->
+                    <div class="ide-container glass animate-slide-in-right">
+                        <div class="ide-header">
+                            <div class="ide-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="ide-filename">confidence.py</span>
+                        </div>
+                        <div class="ide-body">
+                            <pre><code id="typing-code"><span class="keyword">def</span> <span class="function">build_confidence</span>():
+    learning = <span class="string">"learn"</span> <span class="operator">→</span> <span class="string">"practice"</span>
+    asking = <span class="string">"ask"</span> <span class="operator">→</span> <span class="string">"understand"</span>
+    failing = <span class="string">"fail"</span> <span class="operator">→</span> <span class="string">"grow 🚀"</span>
+    
+    <span class="keyword">return</span> learning <span class="operator">&</span> asking <span class="operator">&</span> failing</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Educational Content Creation -->
+        <section class="slide" id="slide-3" data-index="3">
+            <div class="slide-content">
+                <header class="slide-header">
+                    <span class="slide-badge">MEMORIAL FOUNDATION</span>
+                    <h2 class="slide-title">🎬 Educational Content Creation</h2>
+                </header>
+                <div class="grid-1-1 align-center">
+                    <div class="content-left">
+                        <h3 class="glow-title">Anish Jadav Memorial Foundation</h3>
+                        <p class="slide-description text-highlight">
+                            Content created with love, for a cause 💛
+                        </p>
+                        <p class="body-text">
+                            We are building free, top-tier programming content to democratize software engineering education. From recording concepts in local vernacular to publishing structured courses.
+                        </p>
+                        <div class="highlights-list">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📹</span>
+                                <div><strong>Studio Recording:</strong> Professional layouts optimized for clarity.</div>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📱</span>
+                                <div><strong>YouTube Shorts:</strong> Micro-learning assets explaining big ideas in 60s.</div>
+                            </div>
+                        </div>
+                        <a href="https://youtube.com/@AnishJadhavMemorialFoundation" target="_blank" class="action-btn glass hover-lift">
+                            <span>Explore YouTube Channel</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Phone Frame Showcase -->
+                    <div class="phone-wrapper">
+                        <div class="phone-frame glass">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="assets/images/shorts_photo.png" alt="YouTube shorts layout representing a tutorial presentation" class="phone-screenshot">
+                                <div class="phone-overlay">
+                                    <div class="phone-play-btn">▶</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Campus Hackathons -->
+        <section class="slide" id="slide-4" data-index="4">
+            <div class="slide-content">
+                <header class="slide-header">
+                    <span class="slide-badge">CAMPUS HACKATHONS</span>
+                    <h2 class="slide-title">🏆 Hackathons Across Campuses</h2>
+                </header>
+                
+                <div class="hackathon-campuses-grid">
+                    <!-- Dantewada -->
+                    <div class="campus-card glass hover-lift">
+                        <div class="campus-header header-dantewada">
+                            <div class="campus-overlay">
+                                <span class="campus-icon">🔥</span>
+                                <h3>Dantewada</h3>
+                                <p>Innovation Hub</p>
+                            </div>
+                        </div>
+                        <div class="campus-body">
+                            <p>Students from remote tribal areas solving real-world infrastructure problems overnight.</p>
+                            <div class="tag glass-inset">Innovation Culture 💡</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pune -->
+                    <div class="campus-card glass hover-lift">
+                        <div class="campus-header header-pune">
+                            <div class="campus-overlay">
+                                <span class="campus-icon">⛰️</span>
+                                <h3>Pune</h3>
+                                <p>Mountain Builders</p>
+                            </div>
+                        </div>
+                        <div class="campus-body">
+                            <p>Building high-performance production systems and local campus software platforms.</p>
+                            <div class="tag glass-inset">Coding Nights 🌙</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Himachal -->
+                    <div class="campus-card glass hover-lift">
+                        <div class="campus-header header-himachal">
+                            <div class="campus-overlay">
+                                <span class="campus-icon">🤝</span>
+                                <h3>Himachal</h3>
+                                <p>Multi-Campus</p>
+                            </div>
+                        </div>
+                        <div class="campus-body">
+                            <p>Unifying campuses together through joint challenges, brainstorming, and competitive coding.</p>
+                            <div class="tag glass-inset">Teamwork & Fun 🎉</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Building Campus Learning Systems -->
+        <section class="slide" id="slide-5" data-index="5">
+            <div class="slide-content">
+                <header class="slide-header">
+                    <span class="slide-badge">CAMPUS TECH</span>
+                    <h2 class="slide-title">🏫 Building Campus Learning Systems</h2>
+                </header>
+                
+                <div class="systems-grid">
+                    <div class="system-item glass hover-lift">
+                        <div class="system-header">
+                            <span class="system-icon">📊</span>
+                            <h3>Learning Tools</h3>
+                        </div>
+                        <p>Beautiful interactive student dashboards, problem tracking pipelines, and concept maps built by students.</p>
+                    </div>
+                    
+                    <div class="system-item glass hover-lift">
+                        <div class="system-header">
+                            <span class="system-icon">🔧</span>
+                            <h3>Resolution Systems</h3>
+                        </div>
+                        <p>Decentralized internal campus ticket queues ensuring everyday challenges are resolved collectively in minutes.</p>
+                    </div>
+                    
+                    <div class="system-item glass hover-lift">
+                        <div class="system-header">
+                            <span class="system-icon">🤝</span>
+                            <h3>Campus Support</h3>
+                        </div>
+                        <p>Student councils running fully democratic helpdesks, peer mentoring setups, and resource allocation boards.</p>
+                    </div>
+                    
+                    <div class="system-item glass hover-lift">
+                        <div class="system-header">
+                            <span class="system-icon">🚀</span>
+                            <h3>Student Empowerment</h3>
+                        </div>
+                        <p>Providing the tools, administrative access, and full autonomy to unlock the true potential of our learners.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Year 1 Done, Next Year! -->
+        <section class="slide milestone-slide" id="slide-6" data-index="6">
+            <div class="slide-content text-center">
+                <div class="milestone-checkmark glass hover-glow">✅</div>
+                <h2 class="milestone-main-title">Year 1 — Done!</h2>
+                
+                <div class="milestone-divider"></div>
+                
+                <p class="milestone-sub-heading">Now…</p>
+                <h3 class="milestone-target text-gradient">The Next 1 Year! 🚀</h3>
+                <p class="milestone-text">Bigger Dreams. More Students. More Fun!</p>
+                
+                <div class="milestone-icons-row">
+                    <span class="milestone-icon hover-bounce" title="Education">🎓</span>
+                    <span class="milestone-icon hover-bounce" title="Innovation">💡</span>
+                    <span class="milestone-icon hover-bounce" title="Global Impact">🌍</span>
+                    <span class="milestone-icon hover-bounce" title="Awards">🏆</span>
+                    <span class="milestone-icon hover-bounce" title="Partnerships">🤝</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Structured DSA Learning at Scale -->
+        <section class="slide" id="slide-7" data-index="7">
+            <div class="slide-content">
+                <header class="slide-header">
+                    <span class="slide-badge">SCALE & VISION</span>
+                    <h2 class="slide-title">📚 Structured DSA Learning at Scale</h2>
+                </header>
+                
+                <p class="slide-lead-vision text-highlight-alt text-center">
+                    🌟 Vision: Students teaching students — simple, visual, fun!
+                </p>
+                
+                <div class="scale-cards-container">
+                    <div class="scale-card glass hover-lift">
+                        <div class="scale-icon-wrapper blue-glow">🎬</div>
+                        <h3>Simplified Videos</h3>
+                        <p>Short, highly visual, animated explanations translating hard topics into easy-to-grasp concepts without corporate jargon.</p>
+                    </div>
+                    
+                    <div class="scale-card glass hover-lift">
+                        <div class="scale-icon-wrapper amber-glow">👩‍🏫</div>
+                        <h3>Peer Learning</h3>
+                        <p>Unlocking learning by letting students teach students. Breaking barriers through shared context and campus workshops.</p>
+                    </div>
+                    
+                    <div class="scale-card glass hover-lift">
+                        <div class="scale-icon-wrapper magenta-glow">💡</div>
+                        <h3>Easy Concepts</h3>
+                        <p>Stripping away complex notation. Transforming academic heavy-lifting into digestible algorithms with interactive challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Global Reach / SVG World Map -->
+        <section class="slide" id="slide-8" data-index="8">
+            <div class="slide-content">
+                <header class="slide-header">
+                    <span class="slide-badge">GLOBAL NETWORK</span>
+                    <h2 class="slide-title">🌍 Global Hackathon Presence</h2>
+                </header>
+                
+                <div class="grid-2-1 align-center">
+                    <!-- Interactive SVG Map -->
+                    <div class="map-container glass">
+                        <!-- Elegant Glowing World Map SVG -->
+                        <svg viewBox="0 0 1000 500" width="100%" height="100%" class="world-map">
+                            <!-- Minimalist World Outlines -->
+                            <path class="map-land" d="M150 150 L180 140 L220 160 L240 130 L280 150 L300 200 L250 250 L200 230 Z M450 120 L500 100 L550 120 L570 180 L520 220 L480 200 Z M600 150 L650 120 L720 150 L750 220 L700 280 L650 250 L610 200 Z M350 280 L400 250 L420 300 L380 350 L340 320 Z M750 350 L800 320 L840 360 L800 400 L760 380 Z" />
+                            <path class="map-land-secondary" d="M120 200 L140 180 L160 210 L140 240 Z M880 200 L910 180 L930 220 L890 250 Z" />
+                            
+                            <!-- Pulser Lines / Connectors -->
+                            <path class="map-connection-line" d="M 640 230 C 600 150, 750 150, 780 220" />
+                            <path class="map-connection-line" d="M 640 230 C 580 280, 480 280, 520 220" />
+                            
+                            <!-- Hotspot Markers (Pulsing circles) -->
+                            <!-- Pune -->
+                            <g class="map-hotspot" id="hotspot-pune" data-info="Pune Campus: Active mountain builders pushing code 24/7.">
+                                <circle cx="640" cy="230" r="15" class="pulse-ring-outer" />
+                                <circle cx="640" cy="230" r="8" class="pulse-ring-inner" />
+                                <circle cx="640" cy="230" r="4" class="pulse-dot" />
+                                <text x="640" y="215" class="map-label">📍 Pune</text>
+                            </g>
+                            
+                            <!-- Dantewada -->
+                            <g class="map-hotspot" id="hotspot-dante" data-info="Dantewada Campus: Tribal innovation hub leading active coding nights.">
+                                <circle cx="660" cy="245" r="15" class="pulse-ring-outer" />
+                                <circle cx="660" cy="245" r="8" class="pulse-ring-inner" />
+                                <circle cx="660" cy="245" r="4" class="pulse-dot" />
+                                <text x="660" y="265" class="map-label">📍 Dantewada</text>
+                            </g>
+                            
+                            <!-- Online -->
+                            <g class="map-hotspot" id="hotspot-online" data-info="Online Hub: Students connecting from 15+ states in massive digital hackathons.">
+                                <circle cx="720" cy="180" r="15" class="pulse-ring-outer" />
+                                <circle cx="720" cy="180" r="8" class="pulse-ring-inner" />
+                                <circle cx="720" cy="180" r="4" class="pulse-dot" />
+                                <text x="720" y="165" class="map-label">🖥️ Online</text>
+                            </g>
+                            
+                            <!-- Global -->
+                            <g class="map-hotspot" id="hotspot-global" data-info="Global Presence: Competing and collaborating internationally with teams worldwide.">
+                                <circle cx="780" cy="220" r="15" class="pulse-ring-outer" />
+                                <circle cx="780" cy="220" r="8" class="pulse-ring-inner" />
+                                <circle cx="780" cy="220" r="4" class="pulse-dot" />
+                                <text x="780" y="240" class="map-label">🌐 Global</text>
+                            </g>
+                        </svg>
+                        
+                        <!-- Dynamic Tooltip Inside Container -->
+                        <div class="map-tooltip glass" id="map-tooltip">
+                            Hover over a location marker to explore details!
+                        </div>
+                    </div>
+                    
+                    <!-- Metrics Side Card -->
+                    <div class="reach-info-card">
+                        <div class="metric-highlight glass hover-lift">
+                            <span class="metric-number text-gradient">Worldwide</span>
+                            <span class="metric-label">Online Competitions</span>
+                        </div>
+                        
+                        <div class="metric-highlight glass hover-lift">
+                            <span class="metric-number text-gradient-alt">Global</span>
+                            <span class="metric-label">International Hackathons</span>
+                        </div>
+                        
+                        <div class="metric-highlight glass hover-lift">
+                            <span class="metric-number text-gradient-gold">Teams</span>
+                            <span class="metric-label">Connecting Everywhere 🌏</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Creating Go-Getter Students -->
+        <section class="slide" id="slide-9" data-index="9">
+            <div class="slide-content">
+                <header class="slide-header">
+                    <span class="slide-badge">STUDENT OUTCOMES</span>
+                    <h2 class="slide-title">🔥 Creating Go-Getter Students</h2>
+                </header>
+                
+                <div class="go-getter-grid">
+                    <!-- Get Jobs -->
+                    <div class="go-getter-card glass hover-lift" data-index="1">
+                        <div class="go-getter-icon blue-glow">💼</div>
+                        <h3>Get Jobs</h3>
+                        <p>Securing high-paying roles in premium tech firms through deep technical excellence and projects.</p>
+                        <div class="go-getter-progress-bar">
+                            <div class="go-getter-progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Start Startups -->
+                    <div class="go-getter-card glass hover-lift" data-index="2">
+                        <div class="go-getter-icon amber-glow">🚀</div>
+                        <h3>Start Startups</h3>
+                        <p>Unlocking innovation. Transforming student engineers into startup founders solving local challenges.</p>
+                        <div class="go-getter-progress-bar">
+                            <div class="go-getter-progress-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Build Businesses -->
+                    <div class="go-getter-card glass hover-lift" data-index="3">
+                        <div class="go-getter-icon magenta-glow">🏢</div>
+                        <h3>Build Businesses</h3>
+                        <p>Creating sustainable software services, tech consultancies, and digital agencies across regions.</p>
+                        <div class="go-getter-progress-bar">
+                            <div class="go-getter-progress-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Take Initiative -->
+                    <div class="go-getter-card glass hover-lift" data-index="4">
+                        <div class="go-getter-icon gold-glow">⚡</div>
+                        <h3>Take Initiative</h3>
+                        <p>Active ownership. Developing self-reliance, leadership, and active citizenship in local ecosystems.</p>
+                        <div class="go-getter-progress-bar">
+                            <div class="go-getter-progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Conclusion & Still Building -->
+        <section class="slide" id="slide-10" data-index="10">
+            <div class="slide-content conclusion-slide text-center">
+                <div class="conclusion-glow-circle">
+                    <span class="conclusion-emoji">🚀</span>
+                </div>
+                
+                <h2 class="conclusion-title animate-fade-up">More Builders.</h2>
+                <h2 class="conclusion-title animate-fade-up-delayed">More Confidence.</h2>
+                <h2 class="conclusion-title animate-fade-up-delayed-2">More Opportunities.</h2>
+                
+                <div class="milestone-divider"></div>
+                
+                <div class="conclusion-status glass hover-lift animate-fade-up-delayed-3">
+                    <span class="pulse-indicator"></span> Still Building 😊
+                </div>
+                
+                <footer class="conclusion-footer">
+                    <span class="navgurukul-link">NavGurukul</span>
+                    <span class="footer-dot">•</span>
+                    <span>2024–25</span>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <!-- Slideshow Control Footer (Hidden in Scroll mode) -->
+    <footer class="slides-footer glass" id="slides-footer">
+        <button class="nav-arrow-btn" id="prev-btn" title="Previous Slide (Left Arrow)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        
+        <!-- Live Timeline Progress Bar -->
+        <div class="timeline-container" id="timeline-container" title="Click to jump to a slide">
+            <div class="timeline-progress" id="timeline-progress"></div>
+            <!-- Individual markers will be rendered dynamically by JavaScript -->
+        </div>
+        
+        <button class="nav-arrow-btn" id="next-btn" title="Next Slide (Right Arrow/Space)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        
+        <!-- Action Drawer Toggles -->
+        <div class="footer-actions">
+            <button class="action-drawer-btn glass" id="btn-notes-toggle" title="Toggle Presenter Notes">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span>Presenter Notes</span>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Presenter Notes Drawer (Slide-out) -->
+    <aside class="notes-drawer glass" id="notes-drawer">
+        <div class="notes-header">
+            <h3>📝 Presenter Reference Guide</h3>
+            <button class="close-notes-btn" id="btn-notes-close">&times;</button>
+        </div>
+        <div class="notes-body" id="notes-content">
+            <!-- Populated dynamically based on active slide -->
+            <p>No notes for this slide.</p>
+        </div>
+    </aside>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
