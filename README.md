@@ -1,6 +1,6 @@
 # 💻 NavGurukul 1-Year Impact Presentation Website
 
-A high-fidelity, interactive, and beautifully animated web-based presentation showcasing **1 Year of Learning, Building & Student Impact at NavGurukul (2024-25)**.
+A high-fidelity, interactive, and beautifully animated web-based presentation showcasing **1 Year of Learning, Building & Student Impact at NavGurukul (2025-26)**.
 
 This project converts a standard PowerPoint deck into a breathtaking, state-of-the-art interactive experience, optimized for live presenter delivery and standalone report reading.
 

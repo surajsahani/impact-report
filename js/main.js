@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         1: `<h4>📍 Slide 1: Welcome & Landing</h4>
             <ul>
                 <li><strong>Core Focus:</strong> Celebrate 1 year of massive building, student learning milestones, and deep personal transformation.</li>
-                <li><strong>Context:</strong> Introduce NavGurukul's 2024-25 vision. Highlight that we are "Still Building" and expanding.</li>
+                <li><strong>Context:</strong> Introduce NavGurukul's 2025-26 vision. Highlight that we are "Still Building" and expanding.</li>
                 <li><strong>Key talking point:</strong> Focus on the students coding photo. This isn't just an academy; it's a launchpad for lifelong creators.</li>
             </ul>`,
         2: `<h4>📍 Slide 2: Supporting Students in DSA</h4>
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         12: `<h4>📍 Slide 12: Conclusion & Still Building</h4>
              <ul>
                  <li><strong>Summary statements:</strong> Recap the core themes: More Builders. More Confidence. More Opportunities.</li>
-                 <li><strong>Closing note:</strong> Reiterate the "Still Building 😊" tagline. We are committed to continuing the hard work in 2024-25.</li>
+                 <li><strong>Closing note:</strong> Reiterate the "Still Building 😊" tagline. We are committed to continuing the hard work in 2025-26.</li>
                  <li>Invite questions and comments from the audience.</li>
              </ul>`
     };
@@ -461,35 +461,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------------------
     const pulseData = {
         pune: {
-            mar24: { happiness: "8.7 / 10", academics: "82%", meals: "4.2 / 5.0", facilities: "90%", summary: "March 2024 Summary: Transitioned to new classrooms. Internet had brief downtime. 3 code contests completed." },
-            oct24: { happiness: "9.0 / 10", academics: "85%", meals: "4.4 / 5.0", facilities: "94%", summary: "October 2024 Summary: Improved electricity backup installed. New coding bootcamp launched. Peer learning sessions up by 20%." },
-            may25: { happiness: "9.2 / 10", academics: "88%", meals: "4.5 / 5.0", facilities: "96%", summary: "May 2025 Summary: Excellent internet stability. Meals rated highly with student-led menu adjustments. 5 students completed advanced DSA modules." }
+            mar25: { happiness: "8.7 / 10", academics: "82%", meals: "4.2 / 5.0", facilities: "90%", summary: "March 2025 Summary: Transitioned to new classrooms. Internet had brief downtime. 3 code contests completed." },
+            oct25: { happiness: "9.0 / 10", academics: "85%", meals: "4.4 / 5.0", facilities: "94%", summary: "October 2025 Summary: Improved electricity backup installed. New coding bootcamp launched. Peer learning sessions up by 20%." },
+            may26: { happiness: "9.2 / 10", academics: "88%", meals: "4.5 / 5.0", facilities: "96%", summary: "May 2026 Summary: Excellent internet stability. Meals rated highly with student-led menu adjustments. 5 students completed advanced DSA modules." }
         },
         dantewada: {
-            mar24: { happiness: "8.9 / 10", academics: "80%", meals: "4.5 / 5.0", facilities: "88%", summary: "March 2024 Summary: Tribal innovation projects launched. Solar backup system operational. Meals highly appreciated." },
-            oct24: { happiness: "9.1 / 10", academics: "84%", meals: "4.6 / 5.0", facilities: "90%", summary: "October 2024 Summary: 24-hour hackathon successfully organized. Student council elections completed. Minor water supply maintenance." },
-            may25: { happiness: "9.3 / 10", academics: "89%", meals: "4.7 / 5.0", facilities: "92%", summary: "May 2025 Summary: Excellent student feedback. 10 new learners started React framework projects. Water and internet stable." }
+            mar25: { happiness: "8.9 / 10", academics: "80%", meals: "4.5 / 5.0", facilities: "88%", summary: "March 2025 Summary: Tribal innovation projects launched. Solar backup system operational. Meals highly appreciated." },
+            oct25: { happiness: "9.1 / 10", academics: "84%", meals: "4.6 / 5.0", facilities: "90%", summary: "October 2025 Summary: 24-hour hackathon successfully organized. Student council elections completed. Minor water supply maintenance." },
+            may26: { happiness: "9.3 / 10", academics: "89%", meals: "4.7 / 5.0", facilities: "92%", summary: "May 2026 Summary: Excellent student feedback. 10 new learners started React framework projects. Water and internet stable." }
         },
         dharamshala: {
-            mar24: { happiness: "9.0 / 10", academics: "86%", meals: "4.0 / 5.0", facilities: "95%", summary: "March 2024 Summary: Cool mountain weather kept energy high. Focus on database courses. Internet speed upgraded to 100 Mbps." },
-            oct24: { happiness: "9.1 / 10", academics: "88%", meals: "4.2 / 5.0", facilities: "96%", summary: "October 2024 Summary: Cleanliness drive organized. Outdoor group learning sessions. Academic speed is optimal." },
-            may25: { happiness: "9.4 / 10", academics: "91%", meals: "4.4 / 5.0", facilities: "98%", summary: "May 2025 Summary: 98% internet uptime. Students launched two public web apps. Kitchen menu revised with summer cooling drinks." }
+            mar25: { happiness: "9.0 / 10", academics: "86%", meals: "4.0 / 5.0", facilities: "95%", summary: "March 2025 Summary: Cool mountain weather kept energy high. Focus on database courses. Internet speed upgraded to 100 Mbps." },
+            oct25: { happiness: "9.1 / 10", academics: "88%", meals: "4.2 / 5.0", facilities: "96%", summary: "October 2025 Summary: Cleanliness drive organized. Outdoor group learning sessions. Academic speed is optimal." },
+            may26: { happiness: "9.4 / 10", academics: "91%", meals: "4.4 / 5.0", facilities: "98%", summary: "May 2026 Summary: 98% internet uptime. Students launched two public web apps. Kitchen menu revised with summer cooling drinks." }
         },
         bengaluru: {
-            mar24: { happiness: "8.6 / 10", academics: "85%", meals: "4.1 / 5.0", facilities: "92%", summary: "March 2024 Summary: Campus expansion completed. Commenced tech mentorship with corporate volunteers. Heavy emphasis on project work." },
-            oct24: { happiness: "8.8 / 10", academics: "87%", meals: "4.2 / 5.0", facilities: "93%", summary: "October 2024 Summary: Mock interview prep launched. Uptime remains stable. Meal feedback reviewed for regional diversity." },
-            may25: { happiness: "9.0 / 10", academics: "90%", meals: "4.4 / 5.0", facilities: "95%", summary: "May 2025 Summary: 5 students placed in local startups. New node.js syllabus introduced. Student happiness at record high." }
+            mar25: { happiness: "8.6 / 10", academics: "85%", meals: "4.1 / 5.0", facilities: "92%", summary: "March 2025 Summary: Campus expansion completed. Commenced tech mentorship with corporate volunteers. Heavy emphasis on project work." },
+            oct25: { happiness: "8.8 / 10", academics: "87%", meals: "4.2 / 5.0", facilities: "93%", summary: "October 2025 Summary: Mock interview prep launched. Uptime remains stable. Meal feedback reviewed for regional diversity." },
+            may26: { happiness: "9.0 / 10", academics: "90%", meals: "4.4 / 5.0", facilities: "95%", summary: "May 2026 Summary: 5 students placed in local startups. New node.js syllabus introduced. Student happiness at record high." }
         }
     };
 
     const monthFormatNames = {
-        mar24: "Mar 2024",
-        oct24: "Oct 2024",
-        may25: "May 2025"
+        mar25: "Mar 2025",
+        oct25: "Oct 2025",
+        may26: "May 2026"
     };
 
     let selectedCampus = 'pune';
-    let selectedMonth = 'may25';
+    let selectedMonth = 'may26';
 
     function updatePulseDashboard() {
         const data = pulseData[selectedCampus][selectedMonth];
