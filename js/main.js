@@ -52,9 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>`,
         3: `<h4>📍 Slide 3: Educational Content Creation</h4>
             <ul>
-                <li><strong>Anish Jadav Memorial Foundation:</strong> Dedicate this segment to the content created with love for a noble cause.</li>
-                <li><strong>Mission:</strong> Democratize software engineering education. Creating free, highly engaging vernacular coding resources.</li>
-                <li><strong>Asset highlight:</strong> Explain the YouTube Shorts mockup—explaining large concepts under 60 seconds to overcome text-heavy UI friction.</li>
+                <li><strong>Anish Jadav Memorial Foundation:</strong> Highlighting our active channel dedicated to democratizing software education.</li>
+                <li><strong>Key Live Metrics:</strong> Over <strong>11,920+ views</strong>, <strong>88.9 watch hours</strong>, and growing with <strong>142+ subscribers</strong>!</li>
+                <li><strong>Spotlight Feature:</strong> Point out our featured video tutorial: <em>CodeChef 227D - Q2. Bank Glitch</em> by Suraj, showing how we walk students step-by-step through tough algorithm concepts.</li>
+                <li><strong>Presenter note:</strong> Mention how the analytics prove that audio/video-driven, highly visual content breaks the traditional text-heavy digital literacy barrier!</li>
             </ul>`,
         4: `<h4>📍 Slide 4: Campus Hackathons</h4>
             <ul>

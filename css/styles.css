@@ -1568,3 +1568,175 @@ body.scroll-mode .slides-footer {
         font-size: 1.8rem;
     }
 }
+
+/* ==========================================================================
+   YOUTUBE & EDUCATIONAL CONTENT ENHANCEMENTS (Slide 3)
+   ========================================================================== */
+
+.youtube-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.yt-metric-card {
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.yt-metric-val {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.yt-metric-lbl {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.featured-video-box {
+    display: flex;
+    gap: 20px;
+    padding: 16px;
+    border-radius: 16px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.featured-video-thumbnail {
+    width: 160px;
+    height: 90px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.featured-video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.featured-video-box:hover .play-overlay {
+    background: rgba(239, 68, 68, 0.8);
+}
+
+.featured-video-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.featured-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #ef4444;
+    letter-spacing: 0.1em;
+}
+
+.featured-video-body h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.featured-video-body p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.visuals-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.analytics-card {
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.analytics-header {
+    height: 38px;
+    background: rgba(0,0,0,0.3);
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.analytics-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.analytics-img-container {
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.analytics-img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+    border-color: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+    .featured-video-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .featured-video-thumbnail {
+        width: 100%;
+        height: 160px;
+    }
+}
+
