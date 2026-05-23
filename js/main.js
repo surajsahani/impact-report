@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. STATE & DOM REFERENCES
     // ----------------------------------------------------------------------
     let currentSlide = 1;
-    const totalSlides = 11;
+    const totalSlides = 12;
     let isScrollMode = false;
     let typingTimer = null;
 
@@ -82,19 +82,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><strong>Key Indicators:</strong> Highlight student happiness, academics, meals rating, and facility uptime.</li>
                 <li><strong>Value:</strong> Complete transparency of campus operations, driven directly by student entries and feedback.</li>
             </ul>`,
-        7: `<h4>📍 Slide 7: Year 1 Done, Next Year!</h4>
+        7: `<h4>📍 Slide 7: AI Learning Labs — Ella & Zoe</h4>
+            <ul>
+                <li><strong>The Initiative:</strong> AI Learning Labs is building custom models and language learning agents for kids from vernacular mediums.</li>
+                <li><strong>Ella App:</strong> AI-powered English learning app. Mention the link <code>https://ella.navgurukul.org/</code> for students to download the APK.</li>
+                <li><strong>Zoe AI Assistant:</strong> Explain that Zoe (live at <code>https://zoe.zuvy.org/</code>) conducts voice and chat assessments to understand the student's level and guide them interactively.</li>
+                <li><strong>Interactive chat box:</strong> Direct the audience's attention to the simulated chat on the screen and trigger a chip options demo!</li>
+            </ul>`,
+        8: `<h4>📍 Slide 8: Year 1 Done, Next Year!</h4>
             <ul>
                 <li><strong>Celebration point:</strong> Year 1 is successfully done! Give a pause for applause here.</li>
                 <li><strong>Looking Ahead:</strong> The Next 1 Year will double down on reach. More students, larger campuses, and deeper industry integrations.</li>
                 <li><strong>Mantra:</strong> "Bigger Dreams. More Students. More Fun!"</li>
             </ul>`,
-        8: `<h4>📍 Slide 8: Structured DSA at Scale</h4>
+        9: `<h4>📍 Slide 9: Structured DSA at Scale</h4>
             <ul>
                 <li><strong>The Scale Vision:</strong> "Students teaching students" creates a recursive learning loop where knowledge spreads rapidly.</li>
                 <li><strong>Simplified Videos:</strong> Visual, animated, completely zero jargon.</li>
                 <li><strong>Easy Concepts:</strong> Deconstructing complex academic heavy-lifting into bite-sized visual workflows.</li>
             </ul>`,
-        9: `<h4>📍 Slide 9: Global Hackathon Presence</h4>
+        10: `<h4>📍 Slide 10: Global Hackathon Presence</h4>
             <ul>
                 <li><strong>SVG Reach Map:</strong> Point out the pulsing markers on the map:
                     <ul>
@@ -105,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </li>
                 <li><strong>Pulsers:</strong> Hover over markers to reveal custom stats.</li>
             </ul>`,
-        10: `<h4>📍 Slide 10: Creating Go-Getter Students</h4>
+        11: `<h4>📍 Slide 11: Creating Go-Getter Students</h4>
             <ul>
                 <li><strong>The Four Pillars of Outcomes:</strong>
                     <ul>
@@ -116,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </ul>
                 </li>
             </ul>`,
-        11: `<h4>📍 Slide 11: Conclusion & Still Building</h4>
+        12: `<h4>📍 Slide 12: Conclusion & Still Building</h4>
              <ul>
                  <li><strong>Summary statements:</strong> Recap the core themes: More Builders. More Confidence. More Opportunities.</li>
                  <li><strong>Closing note:</strong> Reiterate the "Still Building 😊" tagline. We are committed to continuing the hard work in 2024-25.</li>
@@ -545,9 +552,119 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
+    // 9.6. AI LABS CHAT SIMULATOR (Slide 7)
+    // ----------------------------------------------------------------------
+    const chatMessages = document.getElementById('chat-messages-container');
+    const chatChipsContainer = document.getElementById('chat-chips');
+
+    const conversationFlow = {
+        start: {
+            chips: [
+                { text: "Beginner coder 💻", response: "I am a beginner and just started coding!", next: "beginner" },
+                { text: "Built simple apps 🚀", response: "I built a couple of simple apps already.", next: "experienced" },
+                { text: "Algorithm lover 🧠", response: "I enjoy solving math and algorithm puzzles.", next: "algorithm" }
+            ]
+        },
+        beginner: {
+            reply: "That is wonderful! Coding is like a superpower. Let's write a simple sentence to describe your daily schedule at campus.",
+            chips: [
+                { text: "I practice coding daily. 💻", response: "I wake up early and practice coding daily.", next: "final" },
+                { text: "I attend DSA sessions. 🧠", response: "I attend interactive DSA sessions after breakfast.", next: "final" }
+            ]
+        },
+        experienced: {
+            reply: "Impressive! What technologies or tools did you use to build them? Tell me in English!",
+            chips: [
+                { text: "Python & HTML/CSS 🛠️", response: "I used Python for backend logic and HTML/CSS for layouts.", next: "final" },
+                { text: "Mobile UI & APIs 📱", response: "I designed responsive mobile interfaces and simple API routes.", next: "final" }
+            ]
+        },
+        algorithm: {
+            reply: "Ah, an analytical mind! How do you feel when you solve a hard logic problem? Let's describe that feeling in English.",
+            chips: [
+                { text: "Proud & excited! 😄", response: "I feel very proud and excited!", next: "final" },
+                { text: "Motivated for more! 🔥", response: "I feel motivated to solve even more complex puzzles.", next: "final" }
+            ]
+        },
+        final: {
+            reply: "Awesome job! Your sentence structure is excellent. Keep talking and practicing. Try the live Ella app or chat with me anytime!",
+            chips: [
+                { text: "Restart conversation 🔄", response: "Let's start over!", next: "start" },
+                { text: "Tell me a joke! 😄", response: "Tell me a joke, Zoe!", next: "joke" }
+            ]
+        },
+        joke: {
+            reply: "Why did the computer go to the doctor? ... Because it had a virus! 💻😄",
+            chips: [
+                { text: "Restart conversation 🔄", response: "Let's start over!", next: "start" }
+            ]
+        }
+    };
+
+    function appendChatMessage(sender, text) {
+        if (!chatMessages) return;
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `chat-msg ${sender}`;
+        msgDiv.innerHTML = text;
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function renderChatChips(flowKey) {
+        if (!chatChipsContainer) return;
+        chatChipsContainer.innerHTML = '';
+        
+        const flow = conversationFlow[flowKey];
+        if (!flow || !flow.chips) return;
+
+        flow.chips.forEach(chip => {
+            const btn = document.createElement('button');
+            btn.className = 'chat-chip';
+            btn.innerText = chip.text;
+            btn.addEventListener('click', () => {
+                // 1. Append User Message
+                appendChatMessage('user', chip.response);
+                
+                // 2. Clear Chips
+                chatChipsContainer.innerHTML = '';
+                
+                // 3. Show Bot Typing Indicator
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'chat-msg bot typing-msg';
+                typingDiv.innerHTML = `<div class="typing-dots"><span></span><span></span><span></span></div>`;
+                chatMessages.appendChild(typingDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // 4. Trigger Bot Response
+                setTimeout(() => {
+                    // Remove typing indicator
+                    const typingIndicator = chatMessages.querySelector('.typing-msg');
+                    if (typingIndicator) typingIndicator.remove();
+
+                    if (chip.next === 'start') {
+                        // Reset conversation
+                        chatMessages.innerHTML = `<div class="chat-msg bot">Hello! I am Zoe, your English learning companion. Let's start! How would you describe your coding journey so far?</div>`;
+                        renderChatChips('start');
+                    } else {
+                        const nextFlow = conversationFlow[chip.next];
+                        appendChatMessage('bot', nextFlow.reply);
+                        renderChatChips(chip.next);
+                    }
+                }, 1200);
+            });
+            chatChipsContainer.appendChild(btn);
+        });
+    }
+
+    function initChatControls() {
+        renderChatChips('start');
+    }
+
+    // ----------------------------------------------------------------------
     // 10. INITIALIZATION
     // ----------------------------------------------------------------------
     initPulseControls();
+    initChatControls();
     setupTimeline();
     goToSlide(1);
 });
