@@ -63,11 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><strong>Pune (Mountain Builders ⛰️):</strong> Showcasing campus projects and engineering systems built locally.</li>
                 <li><strong>Himachal (Multi-Campus synergy 🤝):</strong> Unifying campuses through joint brainstorming and coding nights.</li>
             </ul>`,
-        5: `<h4>📍 Slide 5: Building Campus Learning Systems</h4>
+        5: `<h4>📍 Slide 5: Samadhan Campus Issue Tracker App</h4>
             <ul>
-                <li><strong>Learning Dashboards:</strong> Student-made tools tracking problem counts and progression.</li>
-                <li><strong>Resolution Systems:</strong> Democratic internal ticket queues where students solve everyday challenges.</li>
-                <li><strong>Empowerment:</strong> Highlight that campuses are student-run. Giving administrative authority builds strong leadership.</li>
+                <li><strong>The Product:</strong> Highlight that Samadhan was fully engineered and designed by our students to run the campus.</li>
+                <li><strong>Dynamic Demonstration:</strong> Direct attention to the three mobile screens playing real app screen recordings:
+                    <ul>
+                        <li><strong>Screen 1 (Issue List):</strong> Shows reported issues, category badges, and detail logs.</li>
+                        <li><strong>Screen 2 (Creating Tickets):</strong> Shows how quickly and easily a student can file a campus bug.</li>
+                        <li><strong>Screen 3 (Resolution Pipeline):</strong> Real-time pipeline to assign and close tickets in minutes.</li>
+                    </ul>
+                </li>
+                <li><strong>Leadership Outcome:</strong> Giving administrative keys and coding ownership transforms students into capable builders!</li>
             </ul>`,
         6: `<h4>📍 Slide 6: Year 1 Done, Next Year!</h4>
             <ul>
