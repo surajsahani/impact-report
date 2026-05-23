@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. STATE & DOM REFERENCES
     // ----------------------------------------------------------------------
     let currentSlide = 1;
-    const totalSlides = 10;
+    const totalSlides = 11;
     let isScrollMode = false;
     let typingTimer = null;
 
@@ -75,19 +75,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 </li>
                 <li><strong>Leadership Outcome:</strong> Giving administrative keys and coding ownership transforms students into capable builders!</li>
             </ul>`,
-        6: `<h4>📍 Slide 6: Year 1 Done, Next Year!</h4>
+        6: `<h4>📍 Slide 6: Campus Pulse Dashboard</h4>
+            <ul>
+                <li><strong>The Product:</strong> Show the live website <code>https://residentialpulse.navgurukul.org/</code>.</li>
+                <li><strong>Dynamic Controls:</strong> Toggle between campuses (Pune, Dantewada, Dharamshala, Bengaluru) and months (March, April, May 2026) to see how the metrics animate.</li>
+                <li><strong>Key Indicators:</strong> Highlight student happiness, academics, meals rating, and facility uptime.</li>
+                <li><strong>Value:</strong> Complete transparency of campus operations, driven directly by student entries and feedback.</li>
+            </ul>`,
+        7: `<h4>📍 Slide 7: Year 1 Done, Next Year!</h4>
             <ul>
                 <li><strong>Celebration point:</strong> Year 1 is successfully done! Give a pause for applause here.</li>
                 <li><strong>Looking Ahead:</strong> The Next 1 Year will double down on reach. More students, larger campuses, and deeper industry integrations.</li>
                 <li><strong>Mantra:</strong> "Bigger Dreams. More Students. More Fun!"</li>
             </ul>`,
-        7: `<h4>📍 Slide 7: Structured DSA at Scale</h4>
+        8: `<h4>📍 Slide 8: Structured DSA at Scale</h4>
             <ul>
                 <li><strong>The Scale Vision:</strong> "Students teaching students" creates a recursive learning loop where knowledge spreads rapidly.</li>
                 <li><strong>Simplified Videos:</strong> Visual, animated, completely zero jargon.</li>
                 <li><strong>Easy Concepts:</strong> Deconstructing complex academic heavy-lifting into bite-sized visual workflows.</li>
             </ul>`,
-        8: `<h4>📍 Slide 8: Global Hackathon Presence</h4>
+        9: `<h4>📍 Slide 9: Global Hackathon Presence</h4>
             <ul>
                 <li><strong>SVG Reach Map:</strong> Point out the pulsing markers on the map:
                     <ul>
@@ -98,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </li>
                 <li><strong>Pulsers:</strong> Hover over markers to reveal custom stats.</li>
             </ul>`,
-        9: `<h4>📍 Slide 9: Creating Go-Getter Students</h4>
+        10: `<h4>📍 Slide 10: Creating Go-Getter Students</h4>
             <ul>
                 <li><strong>The Four Pillars of Outcomes:</strong>
                     <ul>
@@ -109,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </ul>
                 </li>
             </ul>`,
-        10: `<h4>📍 Slide 10: Conclusion & Still Building</h4>
+        11: `<h4>📍 Slide 11: Conclusion & Still Building</h4>
              <ul>
                  <li><strong>Summary statements:</strong> Recap the core themes: More Builders. More Confidence. More Opportunities.</li>
                  <li><strong>Closing note:</strong> Reiterate the "Still Building 😊" tagline. We are committed to continuing the hard work in 2024-25.</li>
@@ -443,8 +450,98 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
+    // 9.5. CAMPUS PULSE DASHBOARD INTERACTION (Slide 6)
+    // ----------------------------------------------------------------------
+    const pulseData = {
+        pune: {
+            march: { happiness: "8.7 / 10", academics: "82%", meals: "4.2 / 5.0", facilities: "90%", summary: "March Summary: Transitioned to new classrooms. Internet had brief downtime. 3 code contests completed." },
+            april: { happiness: "9.0 / 10", academics: "85%", meals: "4.4 / 5.0", facilities: "94%", summary: "April Summary: Improved electricity backup installed. New coding bootcamp launched. Peer learning sessions up by 20%." },
+            may: { happiness: "9.2 / 10", academics: "88%", meals: "4.5 / 5.0", facilities: "96%", summary: "May Summary: Excellent internet stability. Meals rated highly with student-led menu adjustments. 5 students completed advanced DSA modules." }
+        },
+        dantewada: {
+            march: { happiness: "8.9 / 10", academics: "80%", meals: "4.5 / 5.0", facilities: "88%", summary: "March Summary: Tribal innovation projects launched. Solar backup system operational. Meals highly appreciated." },
+            april: { happiness: "9.1 / 10", academics: "84%", meals: "4.6 / 5.0", facilities: "90%", summary: "April Summary: 24-hour hackathon successfully organized. Student council elections completed. Minor water supply maintenance." },
+            may: { happiness: "9.3 / 10", academics: "89%", meals: "4.7 / 5.0", facilities: "92%", summary: "May Summary: Excellent student feedback. 10 new learners started React framework projects. Water and internet stable." }
+        },
+        dharamshala: {
+            march: { happiness: "9.0 / 10", academics: "86%", meals: "4.0 / 5.0", facilities: "95%", summary: "March Summary: Cool mountain weather kept energy high. Focus on database courses. Internet speed upgraded to 100 Mbps." },
+            april: { happiness: "9.1 / 10", academics: "88%", meals: "4.2 / 5.0", facilities: "96%", summary: "April Summary: Cleanliness drive organized. Outdoor group learning sessions. Academic speed is optimal." },
+            may: { happiness: "9.4 / 10", academics: "91%", meals: "4.4 / 5.0", facilities: "98%", summary: "May Summary: 98% internet uptime. Students launched two public web apps. Kitchen menu revised with summer cooling drinks." }
+        },
+        bengaluru: {
+            march: { happiness: "8.6 / 10", academics: "85%", meals: "4.1 / 5.0", facilities: "92%", summary: "March Summary: Campus expansion completed. Commenced tech mentorship with corporate volunteers. Heavy emphasis on project work." },
+            april: { happiness: "8.8 / 10", academics: "87%", meals: "4.2 / 5.0", facilities: "93%", summary: "April Summary: Mock interview prep launched. Uptime remains stable. Meal feedback reviewed for regional diversity." },
+            may: { happiness: "9.0 / 10", academics: "90%", meals: "4.4 / 5.0", facilities: "95%", summary: "May Summary: 5 students placed in local startups. New node.js syllabus introduced. Student happiness at record high." }
+        }
+    };
+
+    let selectedCampus = 'pune';
+    let selectedMonth = 'may';
+
+    function updatePulseDashboard() {
+        const data = pulseData[selectedCampus][selectedMonth];
+        if (!data) return;
+
+        // Update Text
+        const happinessEl = document.getElementById('val-happiness');
+        const academicsEl = document.getElementById('val-academics');
+        const mealsEl = document.getElementById('val-meals');
+        const facilitiesEl = document.getElementById('val-facilities');
+        const summaryEl = document.getElementById('dashboard-summary');
+        const displayEl = document.getElementById('dashboard-campus-display');
+
+        if (happinessEl) happinessEl.innerText = data.happiness;
+        if (academicsEl) academicsEl.innerText = data.academics;
+        if (mealsEl) mealsEl.innerText = data.meals;
+        if (facilitiesEl) facilitiesEl.innerText = data.facilities;
+        if (summaryEl) summaryEl.innerHTML = `<strong>${selectedMonth.charAt(0).toUpperCase() + selectedMonth.slice(1)} Summary:</strong> ${data.summary.split(': ')[1]}`;
+        if (displayEl) displayEl.innerText = `${selectedCampus.charAt(0).toUpperCase() + selectedCampus.slice(1)} - ${selectedMonth.charAt(0).toUpperCase() + selectedMonth.slice(1)} 2026`;
+
+        // Update Progress Bars
+        const happinessPercent = parseFloat(data.happiness.split(' ')[0]) * 10;
+        const academicsPercent = parseInt(data.academics);
+        const mealsPercent = parseFloat(data.meals.split(' ')[0]) * 20;
+        const facilitiesPercent = parseInt(data.facilities);
+
+        const barHappiness = document.getElementById('bar-happiness');
+        const barAcademics = document.getElementById('bar-academics');
+        const barMeals = document.getElementById('bar-meals');
+        const barFacilities = document.getElementById('bar-facilities');
+
+        if (barHappiness) barHappiness.style.width = `${happinessPercent}%`;
+        if (barAcademics) barAcademics.style.width = `${academicsPercent}%`;
+        if (barMeals) barMeals.style.width = `${mealsPercent}%`;
+        if (barFacilities) barFacilities.style.width = `${facilitiesPercent}%`;
+    }
+
+    function initPulseControls() {
+        const campusBtns = document.querySelectorAll('.campus-sel-btn');
+        campusBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                campusBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedCampus = btn.getAttribute('data-campus');
+                updatePulseDashboard();
+            });
+        });
+
+        const monthBtns = document.querySelectorAll('.month-sel-btn');
+        monthBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                monthBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedMonth = btn.getAttribute('data-month');
+                updatePulseDashboard();
+            });
+        });
+        
+        updatePulseDashboard();
+    }
+
+    // ----------------------------------------------------------------------
     // 10. INITIALIZATION
     // ----------------------------------------------------------------------
+    initPulseControls();
     setupTimeline();
     goToSlide(1);
 });

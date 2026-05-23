@@ -346,8 +346,119 @@
             </div>
         </section>
 
-        <!-- Slide 6: Year 1 Done, Next Year! -->
-        <section class="slide milestone-slide" id="slide-6" data-index="6">
+        <!-- Slide 6: Campus Pulse Dashboard (residentialpulse.navgurukul.org) -->
+        <section class="slide" id="slide-6" data-index="6">
+            <div class="slide-content">
+                <header class="slide-header">
+                    <span class="slide-badge">CAMPUS METRICS</span>
+                    <h2 class="slide-title">📊 Campus Pulse Dashboard</h2>
+                </header>
+                
+                <div class="grid-1-2 align-center">
+                    <div class="content-left">
+                        <h3 class="glow-title">Monthly Campus Pulse Tracking</h3>
+                        <p class="slide-description text-highlight-alt">
+                            Live on <a href="https://residentialpulse.navgurukul.org/" target="_blank" class="pulse-link">residentialpulse.navgurukul.org</a> 🔗
+                        </p>
+                        <p class="body-text">
+                            A student-driven tracker to monitor the health, happiness, meals, and facilities of our residential campuses. Each month, campuses update indicators to ensure accountability and standard of living.
+                        </p>
+                        
+                        <!-- Campus Selection Controls -->
+                        <div class="pulse-controls">
+                            <label class="control-label">Select Campus:</label>
+                            <div class="campus-selector-buttons" id="campus-selector">
+                                <button class="campus-sel-btn active" data-campus="pune">Pune</button>
+                                <button class="campus-sel-btn" data-campus="dantewada">Dantewada</button>
+                                <button class="campus-sel-btn" data-campus="dharamshala">Dharamshala</button>
+                                <button class="campus-sel-btn" data-campus="bengaluru">Bengaluru</button>
+                            </div>
+                        </div>
+
+                        <!-- Month Selection Slider -->
+                        <div class="pulse-controls" style="margin-top: 15px;">
+                            <label class="control-label">Select Month:</label>
+                            <div class="month-selector-buttons" id="month-selector">
+                                <button class="month-sel-btn" data-month="march">Mar 2026</button>
+                                <button class="month-sel-btn" data-month="april">Apr 2026</button>
+                                <button class="month-sel-btn active" data-month="may">May 2026</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dashboard Mockup Panel -->
+                    <div class="dashboard-mockup glass animate-slide-in-right">
+                        <div class="dashboard-header">
+                            <div class="dashboard-tabs">
+                                <span class="tab active">📈 Monthly Overview</span>
+                                <span class="tab">📋 Detailed Review</span>
+                            </div>
+                            <span class="dashboard-status-label" id="dashboard-campus-display">Pune - May 2026</span>
+                        </div>
+                        
+                        <div class="dashboard-body">
+                            <div class="metrics-dashboard-grid">
+                                <!-- Metric 1: Happiness -->
+                                <div class="db-metric-card glass-inset">
+                                    <div class="db-metric-header">
+                                        <span class="db-metric-icon">😊</span>
+                                        <h4>Student Happiness</h4>
+                                    </div>
+                                    <div class="db-metric-val" id="val-happiness">9.2 / 10</div>
+                                    <div class="db-progress-container">
+                                        <div class="db-progress-fill" id="bar-happiness" style="width: 92%;"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Metric 2: Academic Uptime -->
+                                <div class="db-metric-card glass-inset">
+                                    <div class="db-metric-header">
+                                        <span class="db-metric-icon">📚</span>
+                                        <h4>Academic Progress</h4>
+                                    </div>
+                                    <div class="db-metric-val" id="val-academics">88%</div>
+                                    <div class="db-progress-container">
+                                        <div class="db-progress-fill" id="bar-academics" style="width: 88%;"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Metric 3: Meals Quality -->
+                                <div class="db-metric-card glass-inset">
+                                    <div class="db-metric-header">
+                                        <span class="db-metric-icon">🍛</span>
+                                        <h4>Meal Quality Rating</h4>
+                                    </div>
+                                    <div class="db-metric-val" id="val-meals">4.5 / 5.0</div>
+                                    <div class="db-progress-container">
+                                        <div class="db-progress-fill" id="bar-meals" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Metric 4: Internet & Power -->
+                                <div class="db-metric-card glass-inset">
+                                    <div class="db-metric-header">
+                                        <span class="db-metric-icon">⚡</span>
+                                        <h4>Facility Uptime</h4>
+                                    </div>
+                                    <div class="db-metric-val" id="val-facilities">96%</div>
+                                    <div class="db-progress-container">
+                                        <div class="db-progress-fill" id="bar-facilities" style="width: 96%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Highlight Status text -->
+                            <div class="dashboard-highlight-box" id="dashboard-summary">
+                                <strong>May Summary:</strong> Excellent internet stability. Meals rated highly with student-led menu adjustments. 5 students completed advanced DSA modules.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Year 1 Done, Next Year! -->
+        <section class="slide milestone-slide" id="slide-7" data-index="7">
             <div class="slide-content text-center">
                 <div class="milestone-checkmark glass hover-glow">✅</div>
                 <h2 class="milestone-main-title">Year 1 is Done!</h2>
@@ -368,8 +479,8 @@
             </div>
         </section>
 
-        <!-- Slide 7: Structured DSA Learning at Scale -->
-        <section class="slide" id="slide-7" data-index="7">
+        <!-- Slide 8: Structured DSA Learning at Scale -->
+        <section class="slide" id="slide-8" data-index="8">
             <div class="slide-content">
                 <header class="slide-header">
                     <span class="slide-badge">KIDS TEACHING KIDS</span>
@@ -402,8 +513,8 @@
             </div>
         </section>
 
-        <!-- Slide 8: Global Reach / SVG World Map -->
-        <section class="slide" id="slide-8" data-index="8">
+        <!-- Slide 9: Global Reach / SVG World Map -->
+        <section class="slide" id="slide-9" data-index="9">
             <div class="slide-content">
                 <header class="slide-header">
                     <span class="slide-badge">OUR WORLDWIDE FAMILY</span>
@@ -484,8 +595,8 @@
             </div>
         </section>
 
-        <!-- Slide 9: Creating Go-Getter Students -->
-        <section class="slide" id="slide-9" data-index="9">
+        <!-- Slide 10: Creating Go-Getter Students -->
+        <section class="slide" id="slide-10" data-index="10">
             <div class="slide-content">
                 <header class="slide-header">
                     <span class="slide-badge">WHAT WE BECOME</span>
@@ -536,8 +647,8 @@
             </div>
         </section>
 
-        <!-- Slide 10: Conclusion & Still Building -->
-        <section class="slide" id="slide-10" data-index="10">
+        <!-- Slide 11: Conclusion & Still Building -->
+        <section class="slide" id="slide-11" data-index="11">
             <div class="slide-content conclusion-slide text-center">
                 <div class="conclusion-glow-circle">
                     <span class="conclusion-emoji">🚀</span>

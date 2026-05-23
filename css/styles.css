@@ -989,7 +989,201 @@ html:not([data-theme="dark"]) .video-device {
 }
 
 /* ==========================================================================
-   SLIDE 6: MILESTONE INTERSTITIAL SLIDE
+   SLIDE 6: CAMPUS PULSE DASHBOARD (residentialpulse.navgurukul.org)
+   ========================================================================== */
+
+.pulse-link {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.pulse-link:hover {
+    color: var(--accent-orange);
+}
+
+.pulse-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.control-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+.campus-selector-buttons, .month-selector-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.campus-sel-btn, .month-sel-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.campus-sel-btn:hover, .month-sel-btn:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+}
+
+.campus-sel-btn.active {
+    background: var(--accent-blue);
+    color: #ffffff;
+    border-color: var(--accent-blue);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+}
+
+.month-sel-btn.active {
+    background: var(--accent-orange);
+    color: #ffffff;
+    border-color: var(--accent-orange);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+}
+
+/* Dashboard Mockup Panel styling */
+.dashboard-mockup {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+}
+
+html[data-theme="dark"] .dashboard-mockup {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard-header {
+    height: 50px;
+    background: var(--bg-surface-inset);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-tabs {
+    display: flex;
+    gap: 12px;
+}
+
+.dashboard-tabs .tab {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.dashboard-tabs .tab.active {
+    color: var(--text-primary);
+    background: var(--bg-surface);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-status-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    font-family: var(--font-heading);
+}
+
+.dashboard-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.metrics-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.db-metric-card {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.db-metric-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.db-metric-icon {
+    font-size: 1.25rem;
+}
+
+.db-metric-header h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.db-metric-val {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+}
+
+.db-progress-container {
+    height: 6px;
+    background: var(--bg-surface-inset);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.db-progress-fill {
+    height: 100%;
+    border-radius: 9999px;
+    background: linear-gradient(to right, var(--accent-blue), var(--accent-orange));
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dashboard-highlight-box {
+    padding: 16px;
+    border-radius: 10px;
+    background: var(--bg-surface-inset);
+    border-left: 4px solid var(--accent-blue);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+/* Light Theme tweaks */
+html:not([data-theme="dark"]) .dashboard-mockup {
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   SLIDE 7: MILESTONE INTERSTITIAL SLIDE
    ========================================================================== */
 
 .milestone-slide {
